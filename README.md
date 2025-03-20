@@ -1,4 +1,4 @@
-# REST API in Go
+# Email Client in Go
 
 This project is a email sening client using Go. It provides endpoints for various operations and is designed to be lightweight, efficient, and easy to use.
 
@@ -11,6 +11,10 @@ This project is a email sening client using Go. It provides endpoints for variou
 - Go (version 1.18 or later)
 - A terminal or command-line interface
 - A `.env` file for environment variables
+
+# Instructions
+- Replace .env.production to .env only
+
 
 ## Getting Started
 

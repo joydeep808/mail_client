@@ -13,11 +13,11 @@ import (
 func main() {
   
 	app := fiber.New()
-	config.DBConnection()
 	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
-}
+	}
+	config.DBConnection()
 	email.InitializeEmailClient()
 	// app.Mount("/users", router.UserRouter(app))
 	users := app.Group("/users")

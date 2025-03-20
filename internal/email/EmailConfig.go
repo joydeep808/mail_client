@@ -5,9 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sync"
-
 	"html/template"
-
 	"gopkg.in/gomail.v2"
 )
 
@@ -48,7 +46,7 @@ func SendEmail(to string, subject string, body string) error {
 			print("Error while sending email" , err.Error())
 			return err
 	}
-	print("Email send successfully done!")
+	print("Email send successfully done!\n")
 	
 	return nil
 }

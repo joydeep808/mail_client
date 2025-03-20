@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"myapp/internal/model"
 	"os"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -28,16 +27,9 @@ func DBConnection()  {
 	if err != nil {
 		panic("failed to migrate database")
 	}
-	println("connected to database")
+	println("connected to database\n")
 }
 
-
-func getEnv(key, fallback string) string {
-	if value, exists := os.LookupEnv(key); exists {
-		return value
-	}
-	return fallback
-}
 
 func GetDB() *gorm.DB {
 	return db
