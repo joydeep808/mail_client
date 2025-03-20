@@ -12,11 +12,11 @@ import (
 var db *gorm.DB
 
 func DBConnection()  {
-	dbHost := getEnv("DB_HOST", "localhost")
-	dbPort := getEnv("DB_PORT", "5432")
-	dbUser := getEnv("DB_USER", "joydeep")
-	dbPassword := getEnv("DB_PASSWORD", "joydeep122")
-	dbName := getEnv("DB_NAME", "go")
+	dbHost := os.Getenv("DB_HOST")
+	dbPort := os.Getenv("DB_PORT")
+	dbUser := os.Getenv("DB_USER")
+	dbPassword := os.Getenv("DB_PASSWORD")
+	dbName := os.Getenv("DB_NAME")
 	dns := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s", dbHost, dbUser, dbPassword, dbName, dbPort)
 	var err error
 	db , err = gorm.Open(postgres.Open(dns) , &gorm.Config{})
